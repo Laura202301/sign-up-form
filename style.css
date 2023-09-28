@@ -34,9 +34,9 @@ span {
 
 .pic-credit {
   font-family: "Bubbler One", Verdana, Geneva, Tahoma, sans-serif;
-  margin-top: 515px;
+  margin-top: 505px;
   font-size: 12px;
-  padding-left: 10px;
+  padding-left: 15px;
   font-weight: bold;
   color: rgb(28, 47, 87);
 }
@@ -82,14 +82,26 @@ fieldset {
 input[type=text], [type=tel], [type=email], [type=password] {
   width: 100%;
   padding: 4px;
-  border: 1px solid #ccc;
+  border: 2px solid rgb(62, 93, 137);
   border-radius: 4px;
   margin-top: 6px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  outline: none;
+}
+
+input[type=text]:focus,
+input[type=tel]:focus, 
+input[type=email]:focus, 
+input[type=password]:focus {
+  border: 2px solid rgb(255, 230, 230);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 
+  0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .button-container {
-  margin: 32px 0px;
+  margin: 28px 0px;
   text-align: center;
 }
 
@@ -121,3 +133,14 @@ button + p {
 a.log-in {
   color: rgb(200, 206, 243);
 }
+
+.my-name,
+.required,
+.error {
+  font-family: "Bubbler One", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: rgb(200, 206, 243);
+  text-align: right;
+}
+

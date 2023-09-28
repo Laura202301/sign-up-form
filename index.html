@@ -25,7 +25,7 @@
         <p>You <i>know</i> you want to.</p>
       </div>
 
-      <div class= "message">&#10151 Let's do this!</div>
+      <div class= "message">&#10151 Let's do this! <span class="required">Required fields are followed by * </span></div>
 
       <div class="form-container">
         
@@ -33,45 +33,59 @@
 
           <fieldset>
             <div class="user-info">
-              <label for="first-name">FIRST NAME</label>
-              <input type="text" id="first-name" name="user_name" />
+              <label for="first-name">FIRST NAME *</label>
+              <input type="text" id="first-name" name="user_name" minlength="3" maxlength="30" required pattern="[a-zA-Z]+"/>
+              <span class="validation"></span>
             </div>
             <div class="user-info">
-              <label for="last-name">LAST NAME</label>
-              <input type="text" id="last-name" name="user_last_name" />
+              <label for="last-name">LAST NAME *</label>
+              <input type="text" id="last-name" name="user_last_name" minlength="3" maxlength="30" required pattern="[a-zA-Z]+"/>
+              <span class="validation"></span>
             </div>
           </fieldset>
 
           <fieldset>
             <div class="user-info">
-              <label for="mail">EMAIL</label>
-              <input type="email" id="mail" name="user_email" />
+              <label for="mail">EMAIL *</label>
+              <input type="email" id="mail" name="user_email" required/>
+              <span class="validation"></span>
             </div>
             <div class="user-info">
               <label for="tel">PHONE NUMBER</label>
-              <input type="tel" id="tel" name="user_tel" />
+              <input type="tel" id="tel" name="user_tel" minlength = "7" maxlength = "10" pattern="[0-9]{7,}" />
+              <span class="validation"></span>
             </div>
           </fieldset>
 
           <fieldset>
             <div class="user-info">
-              <label for="pwd">PASSWORD</label>
-              <input type="password" id="pwd" name="user_pwd">
+              <label for="pwd">PASSWORD *</label>
+              <input type="password" id="pwd" name="user_pwd" minlength = "8" required/>
+              <div id='pwd-error' class='error'></div>
+              <span class="validation"></span>
             </div>
             <div class="user-info">
-              <label for="confirm-pwd">CONFIRM PASSWORD</label>
-              <input type="password" id="confirm-pwd" name="confirm_pwd">
+              <label for="confirm-pwd">CONFIRM PASSWORD *</label>
+              <input type="password" id="confirm-pwd" name="confirm_pwd" minlength = "8" required/>
+              <div id='pwd-error' class='error'></div>
+              <span class="validation"></span>
             </div>
           </fieldset>
-        </form>
-        
       </div>
-      <div class="button-container">
-        <button type="submit">Create Account</button>
-        <p>Already have an account? <a class="log-in" href="#">Log in</a></p>
+          <div class="button-container">
+            <button type="submit">Create Account</button>
+            <p>Already have an account? <a class="log-in" href="#">Log in</a></p>
+          </div>
+        </form>
+      
+    
+      <div class="footer">
+      <div class="my-name">Copyright ©<a class="my-name" href="https://github.com/Laura202301/sign-up-form"target="_blank"> Laura202301</a></div>
       </div>
     </div>
   </div>
+  
+  <script src="javascript.js"></script> <!--The best practice is to put JavaScript <script> tags just before the closing </body> tag--> 
 </body>
 </html>
 
